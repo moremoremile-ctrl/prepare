@@ -1,0 +1,26 @@
+minimum_pre_commit_version: '4.0.0'
+repos:
+  - repo: local
+    hooks:
+      - id: web-format
+        name: Prettier (staged files)
+        entry: node scripts/project.mjs hook-web-format
+        language: system
+        types_or: [javascript, jsx, ts, tsx, json, yaml, markdown, css, html]
+        exclude: ^(\.agent/|backend/|package-lock\.json$)
+      - id: web-lint
+        name: ESLint (staged files)
+        entry: node scripts/project.mjs hook-web-lint
+        language: system
+        files: \.(js|mjs|ts|tsx)$
+        exclude: ^\.agent/
+      - id: python-format
+        name: Ruff format (staged files)
+        entry: node scripts/project.mjs hook-python-format
+        language: system
+        types: [python]
+      - id: python-lint
+        name: Ruff check (staged files)
+        entry: node scripts/project.mjs hook-python-lint
+        language: system
+        types: [python]

@@ -1,0 +1,39 @@
+{
+  "name": "prepare",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "frontend"
+  ],
+  "engines": {
+    "node": "24.13.1",
+    "npm": "11.8.0"
+  },
+  "packageManager": "npm@11.8.0",
+  "scripts": {
+    "setup": "node scripts/project.mjs setup",
+    "dev": "node scripts/project.mjs dev",
+    "dev:frontend": "npm --workspace frontend run dev",
+    "dev:backend": "node scripts/project.mjs dev:backend",
+    "format": "node scripts/project.mjs format",
+    "format:check": "node scripts/project.mjs format:check",
+    "lint": "node scripts/project.mjs lint",
+    "typecheck": "node scripts/project.mjs typecheck",
+    "test": "node scripts/project.mjs test",
+    "build": "node scripts/project.mjs build",
+    "check": "node scripts/project.mjs check",
+    "verify": "node scripts/project.mjs verify",
+    "hooks:install": "node scripts/project.mjs hooks:install",
+    "hooks:check": "node scripts/project.mjs hooks:check"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.11.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.7",
+    "globals": "17.13.0",
+    "prettier": "3.9.9",
+    "typescript-eslint": "8.71.0"
+  }
+}
