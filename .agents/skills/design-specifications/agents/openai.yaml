@@ -1,0 +1,13 @@
+interface:
+  display_name: 仕様書設計
+  short_description: 画面・動作・内部仕様・共通部品を結び、最新の正本を保つ仕様構成を設計する
+  default_prompt: $design-specifications を使い、既存プロジェクトの画面画像・動作・内部仕様・共通部品を対応付けた仕様構成と更新手順を設計してください。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+    - chatgpt
+    - codex
+    - api
+    - atlas
+  allow_implicit_invocation: true
